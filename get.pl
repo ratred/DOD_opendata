@@ -17,13 +17,15 @@ my @ns_headers = (
 my @urllist;
 my $counter;
 my $curdir;
-my $output = 'out.txt';
+my $output = 'out.csv';
+my $firstpage = 1;
+my $lastpage = 140;
 
 my $browser = LWP::UserAgent->new;
 
 
 open OUT, ">$output";
-for my $pagenum (1..140) {
+for my $pagenum ($firstpage..$lastpage) {
 	print "$pagenum\n";
 	my $url = "https://www.defense.gov/Newsroom/Contracts/?Page=" . $pagenum;
 	my $page = getpage($url);

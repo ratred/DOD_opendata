@@ -1,5 +1,5 @@
 # DOD_opendata
-Download some open data from US DOD site
+Download some open data about contracts from US Departament Of Defence site
 
 Just start script: perl get.pl 
 
